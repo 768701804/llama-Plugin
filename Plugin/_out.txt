@@ -1,0 +1,12 @@
+================================================
+           Already Running
+================================================
+
+http://127.0.0.1:8080 上已经有服务器在跑。
+当前模型: D:\GAME\llama cpp\models\MiniCPM5-1B-F16.gguf
+
+  1. 打开浏览器  (Chrome)
+  2. 停掉它，重新选模型
+  0. Exit
+
+Select [1]: 打开 Chrome: C:\Program Files\Google\Chrome\Application\chrome.exe

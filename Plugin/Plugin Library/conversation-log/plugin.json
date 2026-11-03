@@ -1,0 +1,9 @@
+{
+  "id": "conversation-log",
+  "name": "对话记录",
+  "version": "1.0.0",
+  "author": "local",
+  "description": "把每次聊天请求和回复写进 logs/日期.jsonl，方便事后翻查。",
+  "main": "main.js",
+  "enabled": true
+}
