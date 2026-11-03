@@ -1,0 +1,150 @@
+/* 界面汉化：中文字体栈 + 右上角语言切换按钮 */
+
+body,
+input,
+textarea,
+button {
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei",
+               "PingFang SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------------- 语言切换 ---------------- */
+
+#zhcn-lang {
+  position: fixed;
+  top: 10px;
+  right: 14px;
+  z-index: 99990;
+  font: 13px/1.4 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  user-select: none;
+}
+
+#zhcn-lang .zhcn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, .12);
+  background: rgba(255, 255, 255, .82);
+  color: #2b2f36;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  font: inherit;
+}
+
+#zhcn-lang .zhcn-btn:hover {
+  background: rgba(255, 255, 255, .96);
+  border-color: rgba(0, 0, 0, .2);
+  transform: translateY(-1px);
+}
+
+#zhcn-lang .zhcn-globe {
+  font-size: 13px;
+  line-height: 1;
+  opacity: .85;
+}
+
+#zhcn-lang .zhcn-caret {
+  font-size: 10px;
+  opacity: .55;
+  margin-top: 1px;
+}
+
+#zhcn-lang .zhcn-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  min-width: 132px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, .12);
+  background: rgba(255, 255, 255, .98);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#zhcn-lang .zhcn-menu[hidden] {
+  display: none;
+}
+
+#zhcn-lang .zhcn-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #2b2f36;
+}
+
+#zhcn-lang .zhcn-item:hover {
+  background: rgba(0, 0, 0, .06);
+}
+
+#zhcn-lang .zhcn-tick {
+  opacity: 0;
+  color: #2f8f5b;
+  font-size: 12px;
+}
+
+#zhcn-lang .zhcn-item.is-active .zhcn-tick {
+  opacity: 1;
+}
+
+#zhcn-lang .zhcn-item.is-active {
+  font-weight: 600;
+}
+
+/* ---------------- 深色主题 ---------------- */
+
+.dark #zhcn-lang .zhcn-btn,
+html[data-theme="dark"] #zhcn-lang .zhcn-btn {
+  background: rgba(30, 33, 39, .85);
+  color: #e6e9ee;
+  border-color: rgba(255, 255, 255, .14);
+}
+
+.dark #zhcn-lang .zhcn-btn:hover,
+html[data-theme="dark"] #zhcn-lang .zhcn-btn:hover {
+  background: rgba(40, 44, 52, .96);
+}
+
+.dark #zhcn-lang .zhcn-menu,
+html[data-theme="dark"] #zhcn-lang .zhcn-menu {
+  background: rgba(28, 31, 37, .98);
+  border-color: rgba(255, 255, 255, .14);
+}
+
+.dark #zhcn-lang .zhcn-item,
+html[data-theme="dark"] #zhcn-lang .zhcn-item {
+  color: #e6e9ee;
+}
+
+.dark #zhcn-lang .zhcn-item:hover,
+html[data-theme="dark"] #zhcn-lang .zhcn-item:hover {
+  background: rgba(255, 255, 255, .08);
+}
+
+@media (prefers-color-scheme: dark) {
+  #zhcn-lang .zhcn-btn {
+    background: rgba(30, 33, 39, .85);
+    color: #e6e9ee;
+    border-color: rgba(255, 255, 255, .14);
+  }
+  #zhcn-lang .zhcn-menu {
+    background: rgba(28, 31, 37, .98);
+    border-color: rgba(255, 255, 255, .14);
+  }
+  #zhcn-lang .zhcn-item { color: #e6e9ee; }
+}

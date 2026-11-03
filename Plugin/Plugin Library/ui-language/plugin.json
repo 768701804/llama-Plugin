@@ -1,0 +1,13 @@
+{
+  "id": "ui-language",
+  "name": "UI language",
+  "version": "1.2.0",
+  "author": "local",
+  "description": "把 llama.cpp Web UI 的界面文案翻译成中文或日文（侧栏、设置、对话框、模型页、MCP 等），右上角可随时切换 中文 / 日本語 / English。只翻译界面文字，不碰对话内容。",
+  "main": "main.js",
+  "enabled": true,
+  "webui": {
+    "js": "translate.js",
+    "css": "style.css"
+  }
+}
