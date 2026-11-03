@@ -3,3 +3,4 @@ llama.cpp是轻量化的推理引擎，可以本地部署模型。llama Plugin�
 llama Plugin自带界面语言插件（中，日，英）。llama Plugin安装路径：把Plugin放进llama根目录即可。
 插件安装路径：\Plugin\Plugin Library。
 本插件不改变llama.cpp原本文件。
+插件安装完，打开llama.cpp后，在浏览器中按F5刷新。
